@@ -1,0 +1,43 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mqttserver
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: mqttserver
+    spec:
+      containers:
+      - name: mqttserver
+        image: keggyyregistry.azurecr.io/mqttserver:latest
+        imagePullPolicy: Always
+        ports:
+         - containerPort: 44337
+         - containerPort: 1883
+         - containerPort: 53692
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mqttserver
+  labels:
+    run: mqttserver
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 53692
+    protocol: TCP
+    name: http
+  - port: 443
+    targetPort: 44337
+    protocol: TCP
+    name: https
+  - port: 1883
+    targetPort: 1883
+    protocol: TCP
+    name: tcp
+  selector:
+    run: mqttserver

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MQTTServer", "MQTTServer\MQTTServer.csproj", "{4A260AE2-CC70-4E01-AEEC-D9D63EEA2F56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{6E1E1BFE-AEA3-4928-AB64-4FE57C9C8FEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriber", "Clients\Subscriber\Subscriber.csproj", "{0198E801-2887-48BC-BDF0-283ACEF68026}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "Clients\Publisher\Publisher.csproj", "{92CE803C-03A0-44CE-A354-630C85CC1007}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{8DA4C9E7-0CAE-4144-BAF5-DDA3256362C6}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{75746F31-C6C7-41D3-81A7-8A4CA0BD98D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ssl", "ssl", "{A550271C-BB1D-4113-A6A3-3C7B51AB8017}"
+	ProjectSection(SolutionItems) = preProject
+		ssl\MQTTExample.pfx = ssl\MQTTExample.pfx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A260AE2-CC70-4E01-AEEC-D9D63EEA2F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A260AE2-CC70-4E01-AEEC-D9D63EEA2F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A260AE2-CC70-4E01-AEEC-D9D63EEA2F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A260AE2-CC70-4E01-AEEC-D9D63EEA2F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0198E801-2887-48BC-BDF0-283ACEF68026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0198E801-2887-48BC-BDF0-283ACEF68026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0198E801-2887-48BC-BDF0-283ACEF68026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0198E801-2887-48BC-BDF0-283ACEF68026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92CE803C-03A0-44CE-A354-630C85CC1007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92CE803C-03A0-44CE-A354-630C85CC1007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92CE803C-03A0-44CE-A354-630C85CC1007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92CE803C-03A0-44CE-A354-630C85CC1007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75746F31-C6C7-41D3-81A7-8A4CA0BD98D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75746F31-C6C7-41D3-81A7-8A4CA0BD98D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75746F31-C6C7-41D3-81A7-8A4CA0BD98D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75746F31-C6C7-41D3-81A7-8A4CA0BD98D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0198E801-2887-48BC-BDF0-283ACEF68026} = {6E1E1BFE-AEA3-4928-AB64-4FE57C9C8FEF}
+		{92CE803C-03A0-44CE-A354-630C85CC1007} = {6E1E1BFE-AEA3-4928-AB64-4FE57C9C8FEF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96C88DD8-112A-4C24-B5ED-FE779DB6873A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  mqttserver:
+    image: ${DOCKER_REGISTRY-}mqttserver
+    build:
+      context: .
+      dockerfile: MQTTServer/Dockerfile
+  # MongoDB: https://hub.docker.com/_/mongo/
+  mongodb:
+    image: mongo:3
+    volumes:
+      - 'c:\temp\mongo\:/data/db/'
